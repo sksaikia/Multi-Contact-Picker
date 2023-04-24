@@ -37,19 +37,19 @@ import androidx.navigation.NavHostController
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 import com.google.gson.Gson
-import com.sourav.contact_picker.R
 import com.sourav.contact_picker.design.PopButton
 import com.sourav.contact_picker.design.PopText
 import com.sourav.contact_picker.entity.Contact
 import com.sourav.contact_picker.entity.ListOfContact
 import com.sourav.contact_picker.util.CONTACT_LIST_PARAM
 import com.sourav.contact_picker.viewModel.ContactsViewModel
+import com.sourav.contactpicker.R
 
 var mapOfContacts = HashMap<Contact, Boolean>()
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun ContactPickerScreen(
+public fun ContactPickerScreen(
     navigateTo: (String) -> Unit,
     navController: NavHostController,
     contactsViewModel: ContactsViewModel = hiltViewModel()
