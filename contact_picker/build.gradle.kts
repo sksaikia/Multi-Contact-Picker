@@ -16,7 +16,6 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 31
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -83,7 +82,7 @@ afterEvaluate {
             create<MavenPublication>("multi-contact-picker") {
                 groupId = "com.github.sourav"
                 artifactId = "multi-contact-picker"
-                version = "1.0"
+                version = "1.3"
             }
         }
     }
