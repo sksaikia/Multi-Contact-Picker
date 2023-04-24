@@ -1,12 +1,16 @@
+import de.undercouch.gradle.tasks.download.org.apache.commons.logging.LogFactory.release
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("dagger.hilt.android.plugin")
     id("kotlin-kapt")
     id("kotlin-android")
+    id("maven-publish")
 }
 
 android {
+    namespace = "com.sourav.contactpicker"
     compileSdk = 31
 
     defaultConfig {
@@ -71,4 +75,16 @@ dependencies {
 
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha03")
     implementation("androidx.activity:activity-compose:1.3.0-alpha06")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("multi-contact-picker") {
+                groupId = "com.github.sourav"
+                artifactId = "multi-contact-picker"
+                version = "1.0"
+            }
+        }
+    }
 }
