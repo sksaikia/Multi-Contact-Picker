@@ -1,4 +1,6 @@
 # Multi-Contact-Picker
+[![](https://jitpack.io/v/sksaikia/Multi-Contact-Picker.svg)](https://jitpack.io/#sksaikia/Multi-Contact-Picker)
+
 
 Implementation
 Go to Settings.gradle, inside repositories block ->
